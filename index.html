@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hi Mom! - William Bukowski</title>
+    <style>
+    .container {
+        position: relative; 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1 px solid black;
+        place-items: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+        background-color: white;
+        }
+                
+    .container1 {
+        position: relative;
+        margin: 0 auto;
+    }
+        
+        .button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: rgb(17, 17, 17);
+        border: none;
+        cursor: pointer;
+        }
+    .container2 {
+    border: 1px solid #4CAF50;
+    color: hwb(0 0% 100%);
+    border-radius: 5px;
+    }
+        .list {
+            padding: 10px;
+        }
+        .ul {
+                list-style-type: none;
+                padding: 0;
+        }
+        .li {
+                margin-bottom: 5px;
+
+            }
+    </style>
+	<h3>
+		Hey Mom! just made and hosted my first website on Amazon Web Services today!
+	</h3>
+	<br>
+	<br>
+	<h4>
+		todays date is 05/30/23
+	</h4>
+</head>
+<body>
+   <div class="container" >
+    <div class="container1">
+        <h2>Shopping List</h2>
+        <form id="shoppingForm1">
+            <input type="text" id="itemInput" placeholder="Enter an item" required>
+            <input type="submit" value="Add Item" id ="button1">
+        </form>
+        <ul id="itemList"></ul>
+    </div>
+
+    <div class="container2">
+        <h1>Shopping List</h1>
+        <form id="shoppingForm2"></form>
+        <input type="submit" value="Get Shopping List" id="button2">
+        </form>
+        <ul id="shoppingList" class="itemOutputList"></ul>
+
+      </div>
+
+    
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
