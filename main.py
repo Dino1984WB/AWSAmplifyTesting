@@ -14,3 +14,7 @@ def print_http_response(url):
 
     except requests.exceptions.RequestException as e:
         print("An error occurred:", e)
+
+#target website URL         
+url = "https://"
+print_http_response(url) #print http contents to console
