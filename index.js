@@ -14,7 +14,7 @@ function addItem(e) {
         // Send HTTP request to backend
         const xhr = new XMLHttpRequest();
         var requestType = "POST";
-        var url = "http://127.0.0.1:5000/add-item";
+        var url = "https://main.doz45kizuqzer.amplifyapp.com/";
         var opened = true;
         xhr.open(requestType, url, opened);
         xhr.setRequestHeader("Content-Type", "application/http://127.0.0.1:5000","application/json");
@@ -28,7 +28,7 @@ function getItem(item) {
     //get item from db through flask backend
     const xhr = new XMLHttpRequest();
     var requestType = "GET";
-    var url = "http://127.0.0.1:5000/get-item";
+    var url = "https://main.doz45kizuqzer.amplifyapp.com/";
     var opened = true;
     xhr.open(requestType, url, opened);
     xhr.setRequestHeader("Content-Type", "application/http://127.0.0.1:5000","application/json");
