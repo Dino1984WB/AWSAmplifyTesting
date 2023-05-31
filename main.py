@@ -16,5 +16,5 @@ def print_http_response(url):
         print("An error occurred:", e)
 
 #target website URL         
-url = "https://"
+url = "https://main.doz45kizuqzer.amplifyapp.com/"
 print_http_response(url) #print http contents to console
