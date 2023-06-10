@@ -1,27 +1,6 @@
-#main backend file for the website
+#python program to test db writing to db 'AWSWeb'
 
-import requests
 import mysql.connector
-
-#print http request contents to console (debugging)
-def print_http_response(url):
-    try:
-        response = requests.get(url)
-        response.raise_for_status()  # Raise an exception for non-successful status codes
-
-        print("HTTP Response:")
-        print(response.text)  # Print the response content
-
-    except requests.exceptions.RequestException as e:
-        print("An error occurred:", e)
-
-#target website URL         
-url = "https://main.doz45kizuqzer.amplifyapp.com/"
-print_http_response(url) #print http contents to console
-
-
-#mysql | write 'item' to db from string converted from json found in http req
-
 def write_string_to_database(string):
     try:
         # Establish a connection to the database
@@ -45,16 +24,15 @@ def write_string_to_database(string):
         connection.commit()
 
         print("String inserted successfully!")
+        #Close the cursor and connection
+        
+        cursor.close()
+        connection.close()
+        print("MySQL connection closed.")
 
     except mysql.connector.Error as error:
         print("Error while connecting to MySQL:", error)
-
-    finally:
-        # Close the cursor and connection
-        if cursor:
-            cursor.close()
-        if connection.is_connected():
-            connection.close()
-            print("MySQL connection closed.")
-
-#add call for write_string _to_database() here
+    
+    
+    
+write_string_to_database("orange")
