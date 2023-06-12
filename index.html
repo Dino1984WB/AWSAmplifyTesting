@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hi Mom! - William Bukowski</title>
+    <title>Bukowski Shopping List</title>
     <style>
     .container {
         position: relative; 
@@ -17,63 +17,81 @@
         background-color: blueviolet
         }
                 
-    .container1 {
-        position: relative;
-        margin: 0 auto;
-    }
-        
-        .button {
-        padding: 10px 20px;
-        color: rgb(17, 17, 17);
-        border: none;
+        .container1 {
+            position: relative;
+            margin: 0 auto;
         }
-    .container2 {
-    color: hwb(0 0% 100%);
-    border-radius: 5px;
-    }
-        .list {
-            padding: 10px;
-        }
-        .ul {
-                list-style-type: none;
-                padding: 0;
-        }
-        .li {
-                margin-bottom: 5px;
-
+            
+            .button {
+            padding: 10px 20px;
+            color: rgb(17, 17, 17);
+            border: none;
             }
+        .container2 {
+        color: hwb(0 0% 100%);
+        border-radius: 5px;
+        }
+            .list {
+                padding: 10px;
+            }
+            .ul {
+                    list-style-type: none;
+                    padding: 0;
+            }
+            .li {
+                    margin-bottom: 5px;
+
+                }
+    .container3 {
+        .ul {
+            text-align: center;
+            color:cornflowerblue;
+            padding:10px;
+            border-radius: 10px;
+        }
+        .currentShopping {
+            text-align: center;
+            padding-top: 10px;
+            text-decoration-color: crimson;
+        }
+    }
     </style>
 	<h3>
-		Hey Mom! just made and hosted my first website on Amazon Web Services today!
+		Shopping List WebApp Hosted on AWS Amplify, add items and get the list back with the buttons
 	</h3>
 	<br>
 	<br>
 	<h4>
-		todays date is 05/30/23 - William Bukowski :)
+		Author: William Bukowski
 	</h4>
+    <h2>Last Edit: June 12th, 2023</h2>
 </head>
+
 <body>
-   <div class="container" >
-    <div class="container1">
-        <h2>Shopping List</h2>
-        <form id="shoppingForm1">
-            <input type="text" id="itemInput" placeholder="Enter an item" required>
-            <input type="submit" value="Add Item" id ="button1">
-        </form>
-        <ul id="itemList"></ul>
-    </div>
+    <div class="container" >
+        <div class="container1">
+            <h2>Add items to shopping list:</h2>
+            <form id="shoppingForm1">
+                <input type="text" id="itemInput" placeholder="Enter an item" required>
+                <input type="submit" value="Add Item" id ="button1">
+            </form>
+            <ul id="itemList"></ul>
+        </div>
 
-    <div class="container2">
-        <h1>Shopping List</h1>
-        <form id="shoppingForm2"></form>
-        <input type="submit" value="Get Shopping List" id="button2">
-        </form>
-        <ul id="shoppingList" class="itemOutputList"></ul>
+        <div class="container2" >
+            <h1>Get the Shopping List:</h1>
+            <form id="shoppingForm2"></form>
+            <input type="submit" value="Get Shopping List" id="button2">
+            </form>
+            <ul id="shoppingList" class="itemOutputList"></ul>
+        </div>    
+        </div>
 
-      </div>
-
-    
-    </div>
+            <div class="container3" >
+                <h2 id="currentShopping">Current Shopping List Below:</h2>
+                <ul id="currentShoppingList"></ul>
+            </div>
     <script src="index.js"></script>
 </body>
+
 </html>
